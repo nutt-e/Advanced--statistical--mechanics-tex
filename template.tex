@@ -1,0 +1,78 @@
+\documentclass[12pt, oneside]{article}   	
+\usepackage[margin=1in]{geometry}                		
+%set the margins
+\geometry{letterpaper}                   		
+%choose the paper
+\usepackage[parfill]{parskip}    		
+%new paragraphs separated by newline
+\usepackage{amssymb}
+%some mathematical symbols
+\usepackage{graphicx}
+%be able to draw figures
+\usepackage{bm}
+%boldface for greek symbols
+\usepackage{wrapfig}
+%this allows text to flow around figures
+\newcommand{\mycaption}[1]{\caption{\footnotesize{#1}}}
+% reduces the size of the font in figure acptions
+
+\def\xv{{\mathbf{x}}}
+
+\title{Template}
+\author{PHYS 6328}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+Abstract here.  Summarize the work you will do in 150 words.  Best practice in an abstract is to have a first sentence that addresses ``who cares'', but this is not mandatory.  Abstracts should generally not include citations.  
+\end{abstract}
+%\section{}
+%\subsection{}
+
+\eject
+
+\section{Introduction}
+
+
+\begin{wrapfigure}[12]{r}{0.3\textwidth}
+%this creates a figure that text will wrap around.  
+%\begin{wrapfigure}[n]{x}{w} is n lines long (including caption), x=r (right) or l (left), and w wide.  
+%you are free to just use \begin{figure} instead.
+\vspace{-.4in}
+%this adjusts the location of the image within the figure.  (shifting it up)
+\centering
+%ensure the image is centered in the figure
+\includegraphics[width=.3\textwidth]{image.png}
+%this is the figure that gets drawn.  
+\mycaption{\label{figure.fig}  The caption should be descriptive, and the figure should be referenced in the text.  }
+%this is the caption of the figure.  Include the \label{} to make sure the linking goes correctly
+\vspace{-.1in}
+%this shifts the line below the caption
+\noindent \hrulefill
+%this draws a line.
+\end{wrapfigure}
+
+
+
+This section is mandatory.  The introduction should include an interesting discussion\cite{ref1,ref2} of why the problem is broadly of interest.  This can of course include a discussion of what we've covered in class, but you should tailor your discussion to focus on the three citations you choose from the recent literature.  This section should largely answer the question ``who cares?''  
+
+It is good practice to end the introduction summarizing the organization of the paper. 
+
+\section{Body 1, 2, 3, etc}
+The organization of the body is up to you.  The first section could cover Question 1 for the final project, the second section question 2, and so on.  Alternatively, the first section could cover theory, the second section covering simulations, etc.  You are free to organize how you wish, but it is important for the paper's organization to be coherent.  Be sure to reference each figure (e.g ``in Fig. \ref{figure.fig} we see that...'').  
+
+
+\section{Conclusions}
+
+This section is mandatory.  This should summarize what you've done.  It may be natural to include a discussion of what was learned overall, but you may organize this how you wish.  
+
+It is good practice in a conclusions section to incorporate a discussion of what comes next:  what future work might be suggested by this work, or how do you think it could it be applied to some topic in physics, chemistry, or biology in the future?  
+
+\section{Author Contributions}
+
+This section is mandatory if you have a collaborator.  You should honestly and accurately describe your contributions in no more than two sentences.  If this section differs significantly from the in-person meeting that occurred in November, you may be asked to discuss how the work was completed.  
+
+ \bibliography{template.bib}
+\bibliographystyle{unsrt}
+
+\end{document}  
